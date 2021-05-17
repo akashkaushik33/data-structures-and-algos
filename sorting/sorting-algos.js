@@ -2,7 +2,8 @@ function mergeSort(arr) {
     if (arr.length <= 1) return arr;
         //   console.log(arr)
     var mid = (arr.length / 2) | 0;
-
+    
+    // key thing to note here is, I am using splice which will change the original array and thus splitting original array in two halfs
     var arr1 = mergeSort(arr.splice(0, mid));
     var arr2 = mergeSort(arr);
 
